@@ -4,119 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Hobby 🌏</title>
-    <style>
-      body {
-        background: radial-gradient(
-          circle at 7.5% 24%,
-          rgb(237, 161, 193) 0%,
-          rgb(250, 178, 172) 25.5%,
-          rgb(190, 228, 210) 62.3%,
-          rgb(215, 248, 247) 93.8%
-        );
-      }
-      h1 {
-        text-align: center;
-      }
-      h2 {
-        text-align: center;
-      }
-      p {
-        font-size: 20px;
-        line-height: 25px;
-      }
 
-      .mains {
-        max-width: 700px;
-        background: beige;
-        padding: 16px;
-        border-radius: 10px;
-        text-align: center;
-        margin: 16px auto;
-      }
-      footer {
-        text-align: center;
-        font-size: 15px;
-        font-family: cursive;
-      }
-      .change-button {
-        display: block;
-        margin: 0 auto;
-        background: beige;
-        color: black;
-        transition: all 200ms ease-in-out;
-        padding: 15px;
-        border-radius: 15px;
-        font-size: 18px;
-      }
-      .change-button:hover {
-        background: black;
-        color: beige;
-        cursor: pointer;
-      }
-      .button {
-        background: pink;
-        color: black;
-        transition: all 200ms ease-in-out;
-        padding: 12px;
-        border-radius: 15px;
-        border: 10px;
-        font-size: 20px;
-      }
-      .button:hover {
-        background: black;
-        color: pink;
-        cursor: pointer;
-      }
-      .main-picture {
-        border-radius: 15px;
-        transition: all 200ms ease-in-out;
-        max-width: 400px;
-      }
-      .main-picture:hover {
-        transform: scale(1.2);
-        filter: contrast(0.7);
-      }
-      .sub-pictures {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 15px;
-        max-width: 400px;
-        margin: 0 auto;
-      }
-      .sub-pictures img {
-        max-width: 100%;
-        border-radius: 15px;
-        transition: all 200ms ease-in-out;
-      }
-      .sub-pictures img:hover {
-        transform: scale(2);
-      }
-      .dark {
-        background: linear-gradient(
-          109.6deg,
-          rgb(36, 45, 57) 11.2%,
-          rgb(16, 37, 60) 51.2%,
-          rgb(0, 0, 0) 98.6%
-        );
-        color: beige;
-      }
-      .dark .mains {
-        background: #073d77;
-        opacity: 0.6;
-      }
-      .dark button {
-        background: black;
-        color: beige;
-      }
-      .dark .change-button {
-        transition: all 200ms ease-in-out;
-      }
-      .dark .change-button:hover {
-        background: beige;
-        color: black;
-      }
-    </style>
+    <title>My Hobby 🌏</title>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <button class="change-button">Change Theme</button>
@@ -149,39 +39,6 @@
       <button class="button">Find out more</button>
     </div>
     <footer>Coded by Gloria 🤞 using HTML CSS JS</footer>
-    <script>
-      function changeTheme() {
-        let body = document.querySelector("body");
-        if (body.classList.contains("dark")) {
-          body.classList.remove("dark");
-        } else {
-          body.classList.add("dark");
-        }
-      }
-
-      let themeButton = document.querySelector(".change-button");
-      themeButton.addEventListener("click", changeTheme);
-
-      function findoutmoreButton() {
-        let name = prompt("what is your name?");
-        let budget = prompt(
-          "what is your budget €€€ for travelling to switzerland?"
-        );
-        let h1 = document.querySelector("h1");
-        if (budget <= 400) {
-          alert(
-            "Hi" +
-              " " +
-              name +
-              " " +
-              ",switzerland is an expensive country!!you need to save up more."
-          );
-        } else {
-          alert("Hi" + " " + name + " " + ", get ready for travelling!!");
-        }
-      }
-      let button = document.querySelector(".button");
-      button.addEventListener("click", findoutmoreButton);
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
